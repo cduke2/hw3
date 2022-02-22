@@ -1,0 +1,15 @@
+<h1>New Post</h1>
+
+<%= form_with model: @place do |form| %>
+  <p>
+    <%= form.label "Title" %>
+    <%= form.text_field "Name" %>
+  </p<>
+
+    <p>
+    <%= form.label "Description" %>
+    <%= form.text_field "Description" %>
+  </p>
+
+  <p><%= form.submit %></p>
+<% end %>
