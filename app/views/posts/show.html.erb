@@ -1,0 +1,9 @@
+
+<h1><%= @post.title %>, <%= @post.description %></h1>
+
+<ul>
+  <li><%= @post.place_id %></li>
+  <li><%= @post.created_at %></li>
+</ul>
+
+<p><a href="/places/<%= @post.place.id %>">Back to <%= @post.place.name %></a></p>
