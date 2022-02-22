@@ -1,19 +1,18 @@
 <h1><%= @place.name %></h1>
 
-<h2><%= @place.city %>, <%= @company.state %></h2>
-
-<h3>Contacts</h3>
+<h3>Posts</h3>
 
 <ul>
-  <% for contact in @company.contacts %>
-    <li><%= "#{contact.last_name}, #{contact.first_name}" %></li>
+  <% for post in @place.posts %>
+    <li><%= "#{post.title}, #{contact.description}" %></li>
   <% end %>
 </ul>
 
 <p>
-  <a href="/contacts/new?company_id=<%= @company.id %>">New Contact</a>
+  <a href="/posts/new?place_id=<%= @place.id %>">New Post</a>
 </p>
 
-<p><a href="/companies">Back to All Companies</a></p>
+<p><a href="/places">Back to All Places</a></p>
 
-<p><%= button_to "Delete this company", @company, method: :delete %></p>
+<p><%= button_to "Delete this place", @place, method: :delete %></p>
+
